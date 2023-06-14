@@ -1,14 +1,14 @@
 import psycopg2
-
+import config
 def flush_function(transactions):
     # Set up a connection to your database
     # Replace these values with your actual database parameters
-    
+
     conn = psycopg2.connect(
-        dbname="your_database_name", 
-        user="your_username", 
-        password="your_password", 
-        host="localhost"
+        dbname=config.postgres, 
+        user=config.postgres, 
+        password=config.pg_password, 
+        host=config.pg_host
     )
 
     # Create a new cursor object
